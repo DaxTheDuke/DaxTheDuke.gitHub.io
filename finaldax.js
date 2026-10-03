@@ -45,6 +45,8 @@ const pages = {
     ],
     3: [
         {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 9, row: 6, },
+        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:1, row:3},
+        
         { name: "Lien Y", image: "https://via.placeholder.com/50" },
         // Ajoute tes liens ici pour la Page 3
     ]
