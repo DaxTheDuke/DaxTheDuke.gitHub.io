@@ -1,17 +1,11 @@
 // --- Gestion des pages de liens internet ---
 const pages = {
     1: [
-        
-        
-        
-        
-        
         //INFOS
         { name: "France-Infos", image:"images/France_Info.png", url: "https://www.franceinfo.fr/" ,backgroundColor: "#89e7c5"},
         { name: "BFMTV", image:"images/bfmtv.jpg", url: "https://www.bfmtv.com/en-direct/" ,backgroundColor: "#89e7c5"},
         { name: "LCI", image:"images/LCI.png", url: "https://www.tf1info.fr/direct/" ,backgroundColor: "#89e7c5"},
        
-        
         //Chaines TV
         { name: "TF1", image:"images/TF1.png", url: "https://www.tf1.fr/tf1/replay" ,backgroundColor: "#89e7da",column:1, row:6},
         { name: "FranceTV", image:"images/franceTV.png", url: "https://www.france.tv/" ,backgroundColor: "#b45be7",column:2, row:6},
@@ -23,25 +17,46 @@ const pages = {
         { name: "LCP", image:"images/LCP.jpg", url: "https://lcp.fr/" ,backgroundColor: "rgba(16, 212, 141, 0.44)",column:8, row:6},
        
         //TV
-        { name: "SFR TV", image: "images/SFR.png", url: "https://tv.sfr.fr/home", backgroundColor: "#817dbd", column: 7, row: 1,},
+        { name: "SFR TV", image: "images/SFR.png", url: "https://tv.sfr.fr/home", backgroundColor: "#817dbd", column: 5, row: 1,},
         { name: "PGMS TV", image:"images/PGMTV.png", url: "https://programme-tv.nouvelobs.com/" ,backgroundColor: "#89e7c5",column:6, row:1},
         
         //Banques
-        { name: "CA", image: "images/CA.png", url: "https://www.credit-agricole.fr/", backgroundColor: "#ebae56", column: 9, row: 2,},
-        { name: "LCL", image:"images/LCL.png", url: "https://www.lcl.fr/" ,backgroundColor: "#2ad2bb",column:9, row:3},
+        { name: "CA", image: "images/CA.png", url: "https://www.credit-agricole.fr/", backgroundColor: "#ebae56", column: 8, row: 1,},
+        { name: "LCL", image:"images/LCL.png", url: "https://www.lcl.fr/" ,backgroundColor: "#2ad2bb",column:9, row:1},
+        
+        //RECHERCHES
+        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:3},
+        { name: "Infomaniak", image: "images/infomaniak.jpg", url: "https://www.infomaniak.com/fr", backgroundColor: "#339252", column: 5, row: 4,},
+        { name: "Mistral AI", image:"images/mistral_AI.png", url: "https://chat.mistral.ai/chat" ,backgroundColor: "#342ad2",column:6, row:4},
+        { name: "Chat GPT", image:"images/chatgpt.jpg", url: "https://chatgpt.com/fr-FR/" ,backgroundColor: "#342ad2",column:6, row:3},
+        { name: "AI Studio", image:"images/AI_Studio.png", url: "https://aistudio.google.com/welcome" ,backgroundColor: "#342ad2",column:7, row:3},
+        { name: "Gemini", image:"images/gemini.png", url: "https://gemini.google.com/app" ,backgroundColor: "#342ad2",column:7, row:4},
         
         //Musique
         { name: "ProgArchives", image: "images/prog.png", url: "http://www.progarchives.com/", backgroundColor: "#339252", column: 1, row: 3,},
         { name: "BandCamp", image:"images/bandcamp.png", url: "https://bandcamp.com/" ,backgroundColor: "#342ad2",column:2, row:3},
         
         { name: "Morow", image:"images/morow.png", url: "https://www.morow.com/" ,backgroundColor: "#d2a82a",column:3, row:3},
-        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:3},
+        { name: "Spotify", image:"images/spotify.png", url: "https://open.spotify.com/intl-fr" ,backgroundColor: "#d2a82a",column:1, row:4},
+        { name: "Deezer", image:"images/deezer.png", url: "https://www.deezer.com/fr/" ,backgroundColor: "#d2a82a",column:2, row:4},
+        
+        
         
     ],
+    
     2: [
+        {name: "MEGA", image: "images/mega.png", url: "https://mega.nz/login", backgroundColor: "#0c6bbe" ,  column: 1, row: 1, },
+        {name: "Shadow", image: "images/shadow.png", url: "https://shadow.tech/fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 1, },
+        {name: "Goo Drive", image: "images/googledrive.png", url: "https://workspace.google.com/intl/fr/products/drive/", backgroundColor: "#0c6bbe" ,  column: 3, row: 1, },
+        {name: "Mediafire", image: "images/mediafire.png", url: "https://www.mediafire.com/login/", backgroundColor: "#0c6bbe" ,  column: 4, row: 1, },
+        
+        
         {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 5, row: 4, },
         { name: "Lien B", image: "https://via.placeholder.com/50" },
-        // Ajoute tes liens ici pour la Page 2
+        
+        
+        
+       
     ],
     3: [
         {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 9, row: 6, },
