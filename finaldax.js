@@ -35,6 +35,8 @@ const pages = {
         { name: "BandCamp", image:"images/bandcamp.png", url: "https://bandcamp.com/" ,backgroundColor: "#342ad2",column:2, row:3},
         
         { name: "Morow", image:"images/morow.png", url: "https://www.morow.com/" ,backgroundColor: "#d2a82a",column:3, row:3},
+        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:3},
+        
     ],
     2: [
         {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 5, row: 4, },
@@ -42,7 +44,7 @@ const pages = {
         // Ajoute tes liens ici pour la Page 2
     ],
     3: [
-        { name: "Lien X", image: "https://via.placeholder.com/50" },
+        {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 9, row: 6, },
         { name: "Lien Y", image: "https://via.placeholder.com/50" },
         // Ajoute tes liens ici pour la Page 3
     ]
