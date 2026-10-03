@@ -1,0 +1,277 @@
+/* Réinitialisation des marges et padding */
+body {
+    margin-left: 5;
+    margin-top: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dbc2e6;
+    color: #333;
+    /*display: flex;
+    flex-direction: row; /* par défaut : les éléments s'alignent en ligne */
+  /*justify-content: flex-start; /* aligne à gauche sur l'axe principal */
+  /*align-items: flex-start; /* aligne en haut sur l'axe transversal */
+   display: grid;
+  grid-template-columns: 20% 55% 25%;
+  height: 100vh;                       /* Prend toute la hauteur de l'écran */
+  gap: 17px;   
+    min-height: 100vh;
+}
+
+/* Boutons pour changer de page */
+.page-buttons {
+    display: flex;
+    flex-direction: column; /* Place les enfants les uns en dessous des autres */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.page-buttons button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.page-buttons button:hover {
+    background-color: #555;
+}
+
+/* Zone de liens internet (grid 8x6) */
+.internet-links-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 100px);
+    gap: 10px;
+    /*width: 80%;*/
+    max-width: 1025px;
+    margin: 20px;
+    background-color: #802e2e;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour chaque lien dans le grid */
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color:white;
+}
+
+.link-item:hover {
+    background-color: #ccc;
+}
+
+.link-item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Conteneur pour les listes, le calendrier et l'horloge */
+.side-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 70%;
+    max-width: 1200px;
+    margin: 18px 0;
+}
+
+/* Conteneur des listes "to do" */
+/*
+.todo-lists-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+*/
+
+/* Style des listes "to do" */
+.todo-list {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    width:350px;
+}
+
+.todo-list h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #444;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.todo-list input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555;
+    color: white;
+    font-size: 0.9em;
+}
+
+.todo-list input[type="text"]:focus {
+    outline: none;
+    background-color: #666;
+}
+
+.todo-list button {
+    padding: 6px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 0 3px;
+    background-color: #555;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list button:hover {
+    background-color: #666;
+}
+
+.todo-list .delete-btn {
+    background-color: #e74c3c;
+}
+
+.todo-list .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.todo-list .move-btn {
+    background-color: #3498db;
+}
+
+.todo-list .move-btn:hover {
+    background-color: #2980b9;
+}
+
+.todo-list > button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #2ecc71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.todo-list > button:hover {
+    background-color: #27ae60;
+}
+
+/* Style du calendrier */
+.calendar-container {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 350px;
+    max-width: 400px;
+}
+
+.calendar h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 1px solid #555;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 5px 0;
+}
+
+.calendar-days span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-days span:hover {
+    background-color: #555;
+}
+
+.calendar-days .today {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Style de l'horloge */
+.clock-container {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 350px;
+    max-width: 400px;
+}
+
+.clock {
+    text-align: center;
+}
+
+.clock .time {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.clock .date {
+    font-size: 1em;
+    margin-top: 5px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="finaldax.css">
+</head>
+<body>
+    <!-- Boutons pour changer de page -->
+    <div class="page-buttons">
+        <button onclick="showPage(1)">Page 1</button>
+        <button onclick="showPage(2)">Page 2</button>
+        <button onclick="showPage(3)">Page 3</button>
+        <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 1</h2>
+                <ul id="list1"></ul>
+                <button onclick="addTask('list1')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+        </div>
+          <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
+                <ul id="list2"></ul>
+                <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+        </div>
+    </div>
+
+    <!-- Zone de liens internet (grid 8x6) -->
+    <div style="height: 651px;" class="internet-links-grid" id="linksGrid">
+        <!-- Les liens seront ajoutés dynamiquement via JavaScript -->
+    </div>
+
+    <!-- Conteneur pour les listes, le calendrier et l'horloge -->
+    <div class="side-container">
+        <!-- Listes "to do" -->
+        <!--<div class="todo-lists-container">-->
+            <!--
+            <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 1</h2>
+                <ul id="list1"></ul>
+                <button onclick="addTask('list1')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+            </div>
+            -->
+            <!--
+            <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
+                <ul id="list2"></ul>
+                <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+            </div>
+            -->
+            
+        <!--</div>-->
+
+        <!-- Calendrier -->
+        <div class="calendar-container">
+            <div class="calendar">
+                <h2 id="calendarMonthYear">Octobre 2026</h2>
+                <div class="calendar-weekdays">
+                    <span>Lun</span>
+                    <span>Mar</span>
+                    <span>Mer</span>
+                    <span>Jeu</span>
+                    <span>Ven</span>
+                    <span>Sam</span>
+                    <span>Dim</span>
+                </div>
+                <div class="calendar-days" id="calendarDays"></div>
+            </div>
+        </div>
+
+        <!-- Horloge -->
+        <div class="clock-container">
+            <div class="clock">
+                <div class="time" id="time">09:06</div>
+                <div class="date" id="date">Jeudi 1 octobre 2026</div>
+            </div>
+        </div>
+        <!--
+        <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
+                <ul id="list2"></ul>
+                <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+        </div>
+        -->
+    </div>
+
+    <script src="finaldax.js"></script>
+</body>
+</html>
