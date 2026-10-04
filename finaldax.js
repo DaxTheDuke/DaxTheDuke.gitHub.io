@@ -1,10 +1,13 @@
 // --- Gestion des pages de liens internet ---
 const pages = {
     1: [
+        
+        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:1, row:1},
+        
         //INFOS
-        { name: "France-Infos", image:"images/France_Info.png", url: "https://www.franceinfo.fr/" ,backgroundColor: "#89e7c5"},
-        { name: "BFMTV", image:"images/bfmtv.jpg", url: "https://www.bfmtv.com/en-direct/" ,backgroundColor: "#89e7c5"},
-        { name: "LCI", image:"images/LCI.png", url: "https://www.tf1info.fr/direct/" ,backgroundColor: "#89e7c5"},
+        { name: "France-Infos", image:"images/France_Info.png", url: "https://www.franceinfo.fr/" ,backgroundColor: "#89e7c5", column: 4, row: 1,},
+        { name: "BFMTV", image:"images/bfmtv.jpg", url: "https://www.bfmtv.com/en-direct/" ,backgroundColor: "#89e7c5", column: 5, row: 1,},
+        { name: "LCI", image:"images/LCI.png", url: "https://www.tf1info.fr/direct/" ,backgroundColor: "#89e7c5", column: 6, row: 1,},
        
         //Chaines TV
         { name: "TF1", image:"images/TF1.png", url: "https://www.tf1.fr/tf1/replay" ,backgroundColor: "#89e7da",column:1, row:6},
@@ -17,20 +20,16 @@ const pages = {
         { name: "LCP", image:"images/LCP.jpg", url: "https://lcp.fr/" ,backgroundColor: "rgba(16, 212, 141, 0.44)",column:8, row:6},
        
         //TV
-        { name: "SFR TV", image: "images/SFR.png", url: "https://tv.sfr.fr/home", backgroundColor: "#817dbd", column: 5, row: 1,},
-        { name: "PGMS TV", image:"images/PGMTV.png", url: "https://programme-tv.nouvelobs.com/" ,backgroundColor: "#89e7c5",column:6, row:1},
+        { name: "SFR TV", image: "images/SFR.png", url: "https://tv.sfr.fr/home", backgroundColor: "#817dbd", column: 8, row: 1,},
+        { name: "PGMS TV", image:"images/PGMTV.png", url: "https://programme-tv.nouvelobs.com/" ,backgroundColor: "#89e7c5",column:9, row:1},
         
         //Banques
-        { name: "CA", image: "images/CA.png", url: "https://www.credit-agricole.fr/", backgroundColor: "#ebae56", column: 8, row: 1,},
-        { name: "LCL", image:"images/LCL.png", url: "https://www.lcl.fr/" ,backgroundColor: "#2ad2bb",column:9, row:1},
+        { name: "CA", image: "images/CA.png", url: "https://www.credit-agricole.fr/", backgroundColor: "#ebae56", column: 9, row: 3,},
+        { name: "LCL", image:"images/LCL.png", url: "https://www.lcl.fr/" ,backgroundColor: "#2ad2bb",column:9, row:4},
         
         //RECHERCHES
-        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:3},
-        { name: "Infomaniak", image: "images/infomaniak.jpg", url: "https://www.infomaniak.com/fr", backgroundColor: "#339252", column: 5, row: 4,},
-        { name: "Mistral AI", image:"images/mistral_AI.png", url: "https://chat.mistral.ai/chat" ,backgroundColor: "#342ad2",column:6, row:4},
-        { name: "Chat GPT", image:"images/chatgpt.jpg", url: "https://chatgpt.com/fr-FR/" ,backgroundColor: "#342ad2",column:6, row:3},
-        { name: "AI Studio", image:"images/AI_Studio.png", url: "https://aistudio.google.com/welcome" ,backgroundColor: "#342ad2",column:7, row:3},
-        { name: "Gemini", image:"images/gemini.png", url: "https://gemini.google.com/app" ,backgroundColor: "#342ad2",column:7, row:4},
+        
+        
         
         //Musique
         { name: "ProgArchives", image: "images/prog.png", url: "http://www.progarchives.com/", backgroundColor: "#339252", column: 1, row: 3,},
@@ -45,32 +44,83 @@ const pages = {
     ],
     
     2: [
-        {name: "MEGA", image: "images/mega.png", url: "https://mega.nz/login", backgroundColor: "#0c6bbe" ,  column: 1, row: 1, },
-        {name: "Shadow", image: "images/shadow.png", url: "https://shadow.tech/fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 1, },
-        {name: "Goo Drive", image: "images/googledrive.png", url: "https://workspace.google.com/intl/fr/products/drive/", backgroundColor: "#0c6bbe" ,  column: 3, row: 1, },
-        {name: "Mediafire", image: "images/mediafire.png", url: "https://www.mediafire.com/login/", backgroundColor: "#0c6bbe" ,  column: 4, row: 1, },
+        {name: "MEGA", image: "images/mega.png", url: "https://mega.nz/login", backgroundColor: "#0c6bbe" ,  column: 1, row: 4, },
+        {name: "Shadow", image: "images/shadow.png", url: "https://shadow.tech/fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 4, },
+        {name: "Goo Drive", image: "images/googledrive.png", url: "https://workspace.google.com/intl/fr/products/drive/", backgroundColor: "#0c6bbe" ,  column: 3, row: 4, },
+        {name: "Mediafire", image: "images/mediafire.png", url: "https://www.mediafire.com/login/", backgroundColor: "#0c6bbe" ,  column: 4, row: 4, },
+        
+        {name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:1, row:1},
+        {name: "Google MAP", image:"images/google_map.png", url: "https://www.google.com/maps/place/20+Rue+Jean+du+Chalard,+53700+Villaines-la-Juhel/" ,backgroundColor: "#d2a82a",column:2, row:1},
+        {name: "Google TRAD", image:"images/google_trad.png", url: "https://translate.google.com/?hl=fr&sl=auto&tl=fr&op=translate" ,backgroundColor: "#d2a82a",column:1, row:2},
+        {name: "Google IMG", image:"images/google_img.png", url: "https://images.google.com/?gws_rd=ssl" ,backgroundColor: "#d2a82a",column:2, row:2},
+        {name: "DuckDuckGo", image:"images/duckduckgo.png", url: "https://duckduckgo.com/" ,backgroundColor: "#d2a82a",column:4, row:1},
+        
+        { name: "Infomaniak", image: "images/infomaniak.png", url: "https://www.infomaniak.com/fr", backgroundColor: "#339252", column: 7, row: 1,},
+        { name: "Mistral AI", image:"images/mistral_AI.png", url: "https://chat.mistral.ai/chat" ,backgroundColor: "#342ad2",column:8, row:1},
+        { name: "Chat GPT", image:"images/chatgpt.jpg", url: "https://chatgpt.com/fr-FR/" ,backgroundColor: "#342ad2",column:9, row:1},
+        { name: "AI Studio", image:"images/AI_Studio.png", url: "https://aistudio.google.com/welcome" ,backgroundColor: "#342ad2",column:8, row:2},
+        { name: "Gemini", image:"images/gemini.png", url: "https://gemini.google.com/app" ,backgroundColor: "#342ad2",column:9, row:2},
+        
+        {name: "Magasins U", image: "images/wikipedia.png", url: "https://www.magasins-u.com/accueil.m33662", backgroundColor: "#0c6bbe" ,  column: 6, row: 4, },
+        {name: "Courses U", image: "images/wikipedia.png", url: "https://www.coursesu.com/drive-superu-villaines", backgroundColor: "#0c6bbe" ,  column: 6, row: 4, },
         
         
-        {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 5, row: 4, },
-        { name: "Lien B", image: "https://via.placeholder.com/50" },
+        
+        {name: "Wikipédia", image: "images/wikipedia.png", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 6, row: 4,columnSpan: 2, rowSpan: 1},
+        
         
         
         
        
     ],
     3: [
-        {name: "Wikipédia", image: "images/img1.jpg", url: "https://fr.wikipedia.com", backgroundColor: "#0c6bbe" ,  column: 9, row: 6, },
-        { name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:1, row:3},
+        //COURSES
+        {name: "PMU", image: "images/pmu.png", url: "https://www.pmu.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 1, row: 1, },
+        {name: "EQUIDIA", image: "images/equidia.png", url: "https://www.equidia.fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 1, },
+        {name: "GENY", image: "images/geny.jpg", url: "https://www.geny.com/", backgroundColor: "#0c6bbe" ,  column: 3, row: 1, },
+        {name: "Aspiturf", image: "images/aspiturf.png", url: "https://aspiturf.com/", backgroundColor: "#0c6bbe" ,  column: 4, row: 1, },
+        {name: "GENYBET", image: "images/genybet.png", url: "https://www.genybet.fr/?u=hippisme", backgroundColor: "#0c6bbe" ,  column: 5, row: 1, },
+        {name: "ZETURF", image: "images/zeturf.jpg", url: "https://www.zeturf.fr/fr", backgroundColor: "#0c6bbe" ,  column: 6, row: 1, },
+        {name: "BETCLIC", image: "images/betclic.png", url: "https://www.betclic.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 7, row: 1, },
         
-        { name: "Lien Y", image: "https://via.placeholder.com/50" },
+        //MAISONS
+        {name: "BIEN ICI", image: "images/bienici.png", url: "https://www.bienici.com/", backgroundColor: "#0c6bbe" ,  column: 1, row:3, },
+        {name: "SE LOGER", image: "images/seloger.png", url: "https://www.seloger.com/", backgroundColor: "#0c6bbe" ,  column: 2, row: 3, },
+        {name: "CENTURY21", image: "images/century.jpg", url: "https://www.century21.fr/", backgroundColor: "#0c6bbe" ,  column: 3, row: 3, },
+        {name: "Particuliers", image: "images/particuliers.png", url: "https://www.entreparticuliers.com/", backgroundColor: "#0c6bbe" ,  column: 4, row: 3, },
+        {name: "Foncier", image: "images/DVF.png", url: "https://app.dvf.etalab.gouv.fr/", backgroundColor: "#0c6bbe" ,  column: 5, row: 3, },
+        
+        
+        {name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:6},
+        
+        
+        {name: "Tir à l'arc", image:"images/google.jpg", url: "https://www.silvergames.com/fr/apple-shooter" ,backgroundColor: "#d2a82a",column:1, row:6},
+        
+        {name: "Lien Y", image: "https://via.placeholder.com/50" },
         // Ajoute tes liens ici pour la Page 3
     ]
 };
+3
 
-
-function showPage(pageNumber) {
+function showPage(pageNumber, buttonElement) {
     const linksGrid = document.getElementById("linksGrid");
     linksGrid.innerHTML = "";
+    
+  
+    
+    // --- GESTION DU BOUTON ACTIF ET DE LA COULEUR ---
+    if (buttonElement) {
+        // 1. On retire la classe 'active' de TOUS les boutons
+        const allButtons = document.querySelectorAll(".page-buttons button");
+        allButtons.forEach(btn => btn.classList.remove("active"));
+
+        // 2. On ajoute la classe 'active' sur le bouton cliqué
+        buttonElement.classList.add("active");
+
+        // 3. On applique la couleur à la grille
+        const buttonColor = window.getComputedStyle(buttonElement).backgroundColor;
+        linksGrid.style.backgroundColor = buttonColor;
+    }
 
     const pageLinks = pages[pageNumber] || [];
 
@@ -100,9 +150,15 @@ function showPage(pageNumber) {
 
         // --- APPLICATION DU POSITIONNEMENT ---
         // Si le lien a une colonne et une ligne définies, on applique le CSS Grid
-        if (link.column && link.row) {
-            linkItem.style.gridColumn = link.column;
-            linkItem.style.gridRow = link.row;
+        //if (link.column && link.row) {
+        //    linkItem.style.gridColumn = link.column;
+        //    linkItem.style.gridRow = link.row;
+        //}
+        
+         if (link.column && link.row) {
+            // On utilise le sélecteur "span" de CSS Grid. Si non défini, la valeur par défaut est 1.
+             linkItem.style.gridColumn = `${link.column} / span ${link.columnSpan || 1}`;
+             linkItem.style.gridRow = `${link.row} / span ${link.rowSpan || 1}`;
         }
 
         linksGrid.appendChild(linkItem);

@@ -10,47 +10,12 @@
 <body>
     <!-- Boutons pour changer de page -->
     <div class="page-buttons">
-        <button onclick="showPage(1)">Page 1</button>
-        <button onclick="showPage(2)">Page 2</button>
-        <button onclick="showPage(3)">Page 3</button>
-        <div class="todo-list">
-                <h2><i class="fas fa-clipboard-list"></i> Liste 1</h2>
-                <ul id="list1"></ul>
-                <button onclick="addTask('list1')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
-        </div>
-          <div class="todo-list">
-                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
-                <ul id="list2"></ul>
-                <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
-        </div>
-    </div>
-
-    <!-- Zone de liens internet (grid 8x6) -->
-    <div style="height: 651px;" class="internet-links-grid" id="linksGrid">
-        <!-- Les liens seront ajoutés dynamiquement via JavaScript -->
-    </div>
-
-    <!-- Conteneur pour les listes, le calendrier et l'horloge -->
-    <div class="side-container">
-        <!-- Listes "to do" -->
-        <!--<div class="todo-lists-container">-->
-            <!--
-            <div class="todo-list">
-                <h2><i class="fas fa-clipboard-list"></i> Liste 1</h2>
-                <ul id="list1"></ul>
-                <button onclick="addTask('list1')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
-            </div>
-            -->
-            <!--
-            <div class="todo-list">
-                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
-                <ul id="list2"></ul>
-                <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
-            </div>
-            -->
-            
-        <!--</div>-->
-
+        <button onclick="showPage(1,this)">Page 1</button>
+        <button onclick="showPage(2,this)">Page 2</button>
+        <button onclick="showPage(3,this)">Page 3</button>
+        <button onclick="showPage(4,this)">Page 4</button>
+        <button onclick="showPage(5,this)">Page 5</button>
+        
         <!-- Calendrier -->
         <div class="calendar-container">
             <div class="calendar">
@@ -75,13 +40,56 @@
                 <div class="date" id="date">Jeudi 1 octobre 2026</div>
             </div>
         </div>
-        <!--
+        
+        
+        
+          <!--
+          <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
+                <ul id="list2"></ul>
+                <button onclick="addTask('list2')">Ajouter une tâche</button>
+        </div>
+        -->
+    </div>
+
+    <!-- Zone de liens internet (grid 8x6) -->
+    <div style="height: 651px;" class="internet-links-grid" id="linksGrid">
+        <!-- Les liens seront ajoutés dynamiquement via JavaScript -->
+    </div>
+
+    
+    
+    
+    
+    <!-- Conteneur pour les listes, le calendrier et l'horloge -->
+    <div class="side-container">
         <div class="todo-list">
+                <h2>Ne pas oublier</h2>
+                <ul id="list1"></ul>
+                <button onclick="addTask('list1')">Ajouter une tâche</button>
+        </div>
+        
+        
+        <!-- Listes "to do" -->
+        <!--<div class="todo-lists-container">-->
+            <!--
+            <div class="todo-list">
+                <h2><i class="fas fa-clipboard-list"></i> Liste 1</h2>
+                <ul id="list1"></ul>
+                <button onclick="addTask('list1')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
+            </div>
+            -->
+            <!--
+            <div class="todo-list">
                 <h2><i class="fas fa-clipboard-list"></i> Liste 2</h2>
                 <ul id="list2"></ul>
                 <button onclick="addTask('list2')"><i class="fas fa-plus"></i> Ajouter une tâche</button>
-        </div>
-        -->
+            </div>
+            -->
+            
+        <!--</div>-->
+
+        
     </div>
 
     <script src="finaldax.js"></script>

@@ -12,16 +12,16 @@ body {
   /*align-items: flex-start; /* aligne en haut sur l'axe transversal */
    display: grid;
   grid-template-columns: 20% 55% 25%;
-  height: 100vh;                       /* Prend toute la hauteur de l'écran */
+  height: 70vh;                       /* Prend toute la hauteur de l'écran */
   gap: 17px;   
-    min-height: 100vh;
+    min-height: 66vh;
 }
 
 /* Boutons pour changer de page */
 .page-buttons {
     display: flex;
     flex-direction: column; /* Place les enfants les uns en dessous des autres */
-    gap: 10px;
+    gap: 14px;
     margin: 20px 0;
 }
 
@@ -33,11 +33,27 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .page-buttons button:hover {
     background-color: #555;
 }
+
+/* 2. Style pour le bouton actif */
+.page-buttons button.active {
+    outline: 3px solid white; /* Crée une bordure externe visible peu importe la couleur du bouton */
+    outline-offset: -3px;
+    transform: scale(1.05); /* Grossit légèrement le bouton actif */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-buttons button:nth-child(1) { background-color: #bb2010; } /* Rouge */
+.page-buttons button:nth-child(2) { background-color: #414ad7; } /* Bleu */
+.page-buttons button:nth-child(3) { background-color: #24643f; } /* Vert */
+.page-buttons button:nth-child(4) { background-color: #845c37; } /* Vert */
+.page-buttons button:nth-child(5) { background-color: #106855; } /* Vert */
 
 /* Zone de liens internet (grid 8x6) */
 .internet-links-grid {
@@ -52,6 +68,7 @@ body {
     padding: 14px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease;
 }
 
 /* Style pour chaque lien dans le grid */
@@ -84,9 +101,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 13px;
-    width: 70%;
+    width: 86%;
     max-width: 1200px;
-    margin: 18px 0;
+    margin: 19px 0;
 }
 
 /* Conteneur des listes "to do" */
@@ -104,8 +121,8 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    width:350px;
+    color: rgba(235, 98, 98, 0.96);
+    width:377px;
 }
 
 .todo-list h2 {
@@ -188,7 +205,7 @@ body {
     width: 100%;
     padding: 8px;
     margin-top: 10px;
-    background-color: #2ecc71;
+    background-color: #0b6d35;
     display: flex;
     align-items: center;
     justify-content: center;
