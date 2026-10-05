@@ -27,8 +27,9 @@ const pages = {
         { name: "CA", image: "images/CA.png", url: "https://www.credit-agricole.fr/", backgroundColor: "#ebae56", column: 9, row: 3,},
         { name: "LCL", image:"images/LCL.png", url: "https://www.lcl.fr/" ,backgroundColor: "#2ad2bb",column:9, row:4},
         
-        //RECHERCHES
-        
+        //MAGASINS
+        {name: "Magasins U", image: "images/U_mag.png", url: "https://www.magasins-u.com/accueil.m33662", backgroundColor: "#0c6bbe" ,  column: 5, row: 3, },
+        {name: "Courses U", image: "images/U_drive.png", url: "https://www.coursesu.com/drive-superu-villaines", backgroundColor: "#0c6bbe" ,  column: 5, row: 4, },
         
         
         //Musique
@@ -61,8 +62,7 @@ const pages = {
         { name: "AI Studio", image:"images/AI_Studio.png", url: "https://aistudio.google.com/welcome" ,backgroundColor: "#342ad2",column:8, row:2},
         { name: "Gemini", image:"images/gemini.png", url: "https://gemini.google.com/app" ,backgroundColor: "#342ad2",column:9, row:2},
         
-        {name: "Magasins U", image: "images/wikipedia.png", url: "https://www.magasins-u.com/accueil.m33662", backgroundColor: "#0c6bbe" ,  column: 6, row: 4, },
-        {name: "Courses U", image: "images/wikipedia.png", url: "https://www.coursesu.com/drive-superu-villaines", backgroundColor: "#0c6bbe" ,  column: 6, row: 4, },
+        
         
         
         
@@ -74,14 +74,6 @@ const pages = {
        
     ],
     3: [
-        //COURSES
-        {name: "PMU", image: "images/pmu.png", url: "https://www.pmu.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 1, row: 1, },
-        {name: "EQUIDIA", image: "images/equidia.png", url: "https://www.equidia.fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 1, },
-        {name: "GENY", image: "images/geny.jpg", url: "https://www.geny.com/", backgroundColor: "#0c6bbe" ,  column: 3, row: 1, },
-        {name: "Aspiturf", image: "images/aspiturf.png", url: "https://aspiturf.com/", backgroundColor: "#0c6bbe" ,  column: 4, row: 1, },
-        {name: "GENYBET", image: "images/genybet.png", url: "https://www.genybet.fr/?u=hippisme", backgroundColor: "#0c6bbe" ,  column: 5, row: 1, },
-        {name: "ZETURF", image: "images/zeturf.jpg", url: "https://www.zeturf.fr/fr", backgroundColor: "#0c6bbe" ,  column: 6, row: 1, },
-        {name: "BETCLIC", image: "images/betclic.png", url: "https://www.betclic.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 7, row: 1, },
         
         //MAISONS
         {name: "BIEN ICI", image: "images/bienici.png", url: "https://www.bienici.com/", backgroundColor: "#0c6bbe" ,  column: 1, row:3, },
@@ -94,13 +86,30 @@ const pages = {
         {name: "Google", image:"images/google.jpg", url: "https://www.google.com/" ,backgroundColor: "#d2a82a",column:5, row:6},
         
         
-        {name: "Tir à l'arc", image:"images/google.jpg", url: "https://www.silvergames.com/fr/apple-shooter" ,backgroundColor: "#d2a82a",column:1, row:6},
+        
         
         {name: "Lien Y", image: "https://via.placeholder.com/50" },
         // Ajoute tes liens ici pour la Page 3
+    ],
+    
+    4: [
+        
+        
+    ],
+   5: [
+       //COURSES
+        {name: "PMU", image: "images/pmu.png", url: "https://www.pmu.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 1, row: 1, },
+        {name: "EQUIDIA", image: "images/equidia.png", url: "https://www.equidia.fr/", backgroundColor: "#0c6bbe" ,  column: 2, row: 1, },
+        {name: "GENY", image: "images/geny.jpg", url: "https://www.geny.com/", backgroundColor: "#0c6bbe" ,  column: 3, row: 1, },
+        {name: "Aspiturf", image: "images/aspiturf.png", url: "https://aspiturf.com/", backgroundColor: "#0c6bbe" ,  column: 4, row: 1, },
+        {name: "GENYBET", image: "images/genybet.png", url: "https://www.genybet.fr/?u=hippisme", backgroundColor: "#0c6bbe" ,  column: 5, row: 1, },
+        {name: "ZETURF", image: "images/zeturf.jpg", url: "https://www.zeturf.fr/fr", backgroundColor: "#0c6bbe" ,  column: 6, row: 1, },
+        {name: "BETCLIC", image: "images/betclic.png", url: "https://www.betclic.fr/turf/", backgroundColor: "#0c6bbe" ,  column: 7, row: 1, },
+         
+        {name: "Tir à l'arc", image:"images/tir_arc.png", url: "https://www.silvergames.com/fr/apple-shooter" ,backgroundColor: "#d2a82a",column:1, row:6},
     ]
 };
-3
+
 
 function showPage(pageNumber, buttonElement) {
     const linksGrid = document.getElementById("linksGrid");
