@@ -199,82 +199,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateClock, 1000);
 });
 
-// --- Gestion des listes "to do" ---
-// Fonction pour ajouter une tâche à une liste
-function addTask(listId, taskText = "") {
-    const list = document.getElementById(listId);
-    const newTask = document.createElement("li");
-
-    const input = document.createElement("input");
-    input.type = "text";
-    input.placeholder = "Nouvelle tâche";
-    input.value = taskText;
-
-    // Sauvegarder la tâche quand on quitte le champ
-    input.addEventListener('blur', saveTasks);
-    input.addEventListener('keyup', saveTasks);
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.innerHTML = '<i class="fas fa-check"></i>';
-    deleteBtn.className = "delete-btn";
-    deleteBtn.onclick = function() {
-        list.removeChild(newTask);
-        saveTasks();
-    };
-
-    const upBtn = document.createElement("button");
-    upBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    upBtn.className = "move-btn";
-    upBtn.onclick = function() {
-        moveTaskUp(newTask);
-        saveTasks();
-    };
-
-    const downBtn = document.createElement("button");
-    downBtn.innerHTML = '<i class="fas fa-arrow-down"></i>';
-    downBtn.className = "move-btn";
-    downBtn.onclick = function() {
-        moveTaskDown(newTask);
-        saveTasks();
-    };
-
-    newTask.appendChild(upBtn);
-    newTask.appendChild(downBtn);
-    newTask.appendChild(input);
-    newTask.appendChild(deleteBtn);
-
-    list.appendChild(newTask);
-    input.focus();
-}
-
-// Fonction pour monter une tâche dans la liste
-function moveTaskUp(task) {
-    const previousTask = task.previousElementSibling;
-    if (previousTask) {
-        task.parentNode.insertBefore(task, previousTask);
-    }
-}
-
-// Fonction pour descendre une tâche dans la liste
-function moveTaskDown(task) {
-    const nextTask = task.nextElementSibling;
-    if (nextTask) {
-        task.parentNode.insertBefore(nextTask, task);
-    }
-}
-
-// Fonction pour sauvegarder toutes les tâches
-function saveTasks() {
-    for (let i = 1; i <= 2; i++) {
-        const listId = `list${i}`;
-        const list = document.getElementById(listId);
-        const tasks = Array.from(list.children).map(li => {
-            return li.querySelector('input').value;
-        });
-        localStorage.setItem(listId, JSON.stringify(tasks));
-    }
-}
-
 // --- Gestion du calendrier ---
 function updateCalendar() {
     const now = new Date();
@@ -290,11 +214,12 @@ function updateCalendar() {
     calendarDays.innerHTML = "";
 
     // Obtenir le premier jour du mois et le nombre de jours dans le mois
-    const firstDay = new Date(year, month, 1).getDay();
+    //const firstDay = new Date(year, month, 1).getDay();
+    let firstDay = new Date(year, month, 1).getDay(); // Dimanche = 0, Lundi = 1...
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-
+    firstDay = firstDay === 0 ? 6 : firstDay - 1;
     // Ajouter des cases vides pour les jours avant le 1er du mois
-    for (let i = 0; i < firstDay - 1; i++) {
+    for (let i = 0; i < firstDay; i++) {
         const emptyDay = document.createElement("span");
         calendarDays.appendChild(emptyDay);
     }
